@@ -22,7 +22,7 @@ If you have any questions
  -> please ping me at Twitter [https://twitter.com/SvenRuppert](https://twitter.com/SvenRuppert)
 
 ## more to read and see
-* german article [http://bit.ly/jaxenter-001](http://bit.ly/jaxenter-001)
+* german article [http://bit.ly/jaxenter-003](http://bit.ly/jaxenter-003)
 * engl. article : not translated until now, **[ping me](https://twitter.com/SvenRuppert)** if you need it
 
 ## Screencast (german)
