@@ -8,16 +8,16 @@
   <artifactId>helloworld</artifactId>
   <version>1.0.0-SNAPSHOT</version>
 
-  <packaging>war</packaging>
+  <packaging>jar</packaging>
 
   <properties>
     <maven.compiler.target>1.8</maven.compiler.target>
     <maven.compiler.source>1.8</maven.compiler.source>
-    <vaadin.version>8.1.6</vaadin.version>
-    <undertow.version>1.4.16.Final</undertow.version>
-    <javax.servlet-api.version>3.1.0</javax.servlet-api.version>
-    <selenium.version>3.4.0</selenium.version>
-    <wildfly.version>2017.6.0</wildfly.version>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <vaadin.version>8.1.7</vaadin.version>
+    <undertow.version>1.4.21.Final</undertow.version>
+    <javax.servlet-api.version>4.0.0</javax.servlet-api.version>
+    <selenium.version>3.8.1</selenium.version>
   </properties>
 
   <dependencyManagement>
@@ -81,7 +81,7 @@
     <dependency>
       <groupId>com.squareup.okhttp3</groupId>
       <artifactId>okhttp</artifactId>
-      <version>3.8.0</version>
+      <version>3.9.1</version>
       <scope>test</scope>
     </dependency>
 
@@ -101,12 +101,6 @@
     </dependency>
 
     <dependency>
-      <groupId>org.wildfly.swarm</groupId>
-      <artifactId>undertow</artifactId>
-      <version>${wildfly.version}</version>
-    </dependency>
-
-    <dependency>
       <groupId>org.seleniumhq.selenium</groupId>
       <artifactId>selenium-chrome-driver</artifactId>
       <version>${selenium.version}</version>
@@ -119,28 +113,28 @@
   <build>
     <plugins>
 
-      <plugin>
-        <groupId>com.vaadin</groupId>
-        <artifactId>vaadin-maven-plugin</artifactId>
-        <version>${vaadin.version}</version>
-        <configuration>
-          <extraJvmArgs>-Xmx512M -Xss1024k</extraJvmArgs>
-          <webappDirectory>${basedir}/target/classes/VAADIN/widgetsets</webappDirectory>
-          <draftCompile>false</draftCompile>
-          <compileReport>false</compileReport>
-          <style>OBF</style>
-          <strict>true</strict>
-        </configuration>
-        <executions>
-          <execution>
-            <goals>
-              <goal>update-theme</goal>
-              <!-- Comment out compile-theme goal to use on-the-fly theme compilation -->
-              <goal>compile-theme</goal>
-            </goals>
-          </execution>
-        </executions>
-      </plugin>
+      <!--<plugin>-->
+        <!--<groupId>com.vaadin</groupId>-->
+        <!--<artifactId>vaadin-maven-plugin</artifactId>-->
+        <!--<version>${vaadin.version}</version>-->
+        <!--<configuration>-->
+          <!--<extraJvmArgs>-Xmx512M -Xss1024k</extraJvmArgs>-->
+          <!--<webappDirectory>${basedir}/target/classes/VAADIN/widgetsets</webappDirectory>-->
+          <!--<draftCompile>false</draftCompile>-->
+          <!--<compileReport>false</compileReport>-->
+          <!--<style>OBF</style>-->
+          <!--<strict>true</strict>-->
+        <!--</configuration>-->
+        <!--<executions>-->
+          <!--<execution>-->
+            <!--<goals>-->
+              <!--<goal>update-theme</goal>-->
+              <!--&lt;!&ndash; Comment out compile-theme goal to use on-the-fly theme compilation &ndash;&gt;-->
+              <!--<goal>compile-theme</goal>-->
+            <!--</goals>-->
+          <!--</execution>-->
+        <!--</executions>-->
+      <!--</plugin>-->
     </plugins>
   </build>
 

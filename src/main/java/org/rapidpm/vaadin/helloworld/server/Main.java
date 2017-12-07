@@ -67,9 +67,6 @@ public class Main {
       undertowServer.start();
 
       undertowOptional = Optional.of(undertowServer);
-
-      undertowServer.getListenerInfo().forEach(System.out::println);
-
     } catch (ServletException e) {
       e.printStackTrace();
       undertowOptional = Optional.empty();
